@@ -1,0 +1,10 @@
+<h1>New Game</h1>
+
+<h3>Your letters:</h3>
+<p><%= @letters.join(' ') %></p>
+
+<%= form_tag("/score", method: "post") do %>
+  <%= label_tag(:word, "Whats the longest word you can find?:") %>
+  <%= text_field_tag(:word) %>
+  <%= submit_tag("Play") %>
+<% end %>
