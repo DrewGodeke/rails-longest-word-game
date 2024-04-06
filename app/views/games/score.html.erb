@@ -1,2 +1,9 @@
-<h1>Games#score</h1>
-<p>Find me in app/views/games/score.html.erb</p>
+<h1>RESULTS</h1>
+
+<% if @valid_word %>
+  <p>Congratulations! "<%= @word %>" is a valid word.</p>
+<% else %>
+  <p>Sorry, but "<%= @word %>" cannot be built out of the given letters.</p>
+<% end %>
+
+<%= link_to "Play Again", root_path, class: "btn btn-primary" %>
